@@ -1,11 +1,15 @@
 import React, {FC} from 'react';
-import {Text, SafeAreaView} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {AppRoutes} from './app/routes';
 
 const App: FC = () => {
   return (
-    <SafeAreaView>
-      <Text>App</Text>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 
