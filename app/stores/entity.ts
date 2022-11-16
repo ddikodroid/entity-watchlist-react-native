@@ -6,6 +6,7 @@ export interface IEntitySlice {
   entities: IEntity[];
   addEntity: (entity: IEntity) => void;
   removeEntity: (entity: IEntity) => void;
+  setEntities: (list: IEntity[]) => void;
 }
 
 const initialState = {
@@ -31,5 +32,8 @@ export const entitySlice: StateCreator<
         `${e.symbol}:${e.exchange}` !== `${entity.symbol}:${entity.exchange}`,
     );
     set({entities: newList});
+  },
+  setEntities: list => {
+    set({entities: list});
   },
 });
