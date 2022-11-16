@@ -20,7 +20,9 @@ interface IIconButton
 
 const IconButton = ({iconStyle, buttonStyle, ...props}: IIconButton) => {
   return (
-    <Pressable {...props} style={buttonStyle}>
+    <Pressable
+      {...props}
+      style={({pressed}) => [buttonStyle, {opacity: pressed ? 0.6 : 1}]}>
       <Image {...props} style={[styles.icon, iconStyle]} />
     </Pressable>
   );
