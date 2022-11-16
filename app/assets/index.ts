@@ -4,4 +4,6 @@ export const ICONS = {
   search: require('./icons/magnifying-glass.png'),
   filter: require('./icons/adjustments-horizontal.png'),
   notFound: require('./icons/face-frown.png'),
+  check: require('./icons/check-circle.png'),
+  data: require('./icons/document-text.png'),
 };
